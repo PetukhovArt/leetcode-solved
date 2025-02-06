@@ -9,11 +9,10 @@ function reverseVowels(s: string): string {
         const isVowel = (ch) => vowels.has(ch.toLowerCase());
 
         if (!isVowel(arr[left])) {
-            left++; // Двигаем левый указатель, если символ не гласный
+            left++;
         } else if (!isVowel(arr[right])) {
-            right--; // Двигаем правый указатель, если символ не гласный
+            right--;
         } else {
-            // Если оба символа — гласные, меняем их местами
             [arr[left], arr[right]] = [arr[right], arr[left]];
             left++;
             right--;
